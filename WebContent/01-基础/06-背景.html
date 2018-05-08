@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>背景</title>
+<style>
+	#p1{
+		background-color: gray;
+	}
+	/*transparent:透明*/
+	#p2{
+		background-color: transparent;
+	}
+	#p3{
+		background-color: rgb(250,0,255);
+	}
+	#p4{
+		background-color: #00ff00;
+	}
+	#div1{
+		background-image: url(../img/IMG_2584.JPG);
+		width:200px;
+		height:100px;
+	}
+	/*
+		背景重复：
+		background-repeat属性 
+		值可以选 
+		repeat; 水平垂直方向都重复 
+		repeat-x; 只有水平方向重复 
+		repeat-y; 只有垂直方向重复 
+		no-repeat; 无重复
+	*/
+	#div2{
+		background-image: url(../img/background_small.jpg);
+		width: 200px;
+		height: 100px;
+		background-repeat: no-repeat;
+	}
+	#div3{
+		background-image: url(../img/background_small.jpg);
+		width: 200px;
+		height: 100px;	
+		background-repeat: repeat-x;	
+	}
+	#div4{
+		background-image: url(../img/background_small.jpg);
+		width: 200px;
+		height: 100px;	
+		background-repeat: repeat-y;	
+	}
+	#div5{
+		background-image: url(../img/background_small.jpg);
+		width: 200px;
+		height: 100px;	
+		background-repeat: repeat;
+	}
+</style>
+</head>
+<body>
+	<h3>1、背景颜色：</h3>
+	<h4>
+		属性名background-color<br>
+		颜色的值可以采用3种方式<br>
+		1. 预定义的颜色名字<br>
+		比如red,gray,white,black,pink，参考颜色速查手册<br>
+		2. rgb格式<br>
+		分别代表红绿蓝的比例 rgb(250,0,255) 即表示红色是满的，没有绿色，蓝色是满的，即红色和蓝色混合在一起：紫色<br>
+		3. 16进制的表示<br>
+		#00ff00 等同于 rgb(0,255,0)<br>	
+	</h4>
+	<p id="p1">灰色</p>
+	<p id="p2">透明背景，默认即透明背景</p>
+	<p id="p3">紫色</p>
+	<p id="p4">绿色背景</p>
+	<h3>2、背景图片：</h3>
+	<div id="div1">
+		这是一个有背景图片的div
+	</div>
+	<h3>3、背景重复：</h3>
+	<h4>
+		background-repeat属性 <br>
+		值可以选 :<br>
+		repeat; 水平垂直方向都重复 <br>
+		repeat-x; 只有水平方向重复 <br>
+		repeat-y; 只有垂直方向重复 <br>
+		no-repeat; 无重复<br>
+	</h4>
+	<div id="div2">
+		背景不重复
+	</div>
+	<div id="div3">
+		 背景水平重复
+	</div>
+	<div id="div4">
+		背景垂直重复
+	</div>
+	<div id="div5">
+		背景水平、垂直都重复
+	</div>
+</body>
+</html>
