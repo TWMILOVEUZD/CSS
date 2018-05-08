@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文本</title>
+<style>
+	/*1、文字颜色*/
+	#div1{
+		color:pink;
+	}
+	/*让div和span的边框显露出来，便于理解本知识点*/
+	div,span{
+		border:1px gray solid;
+		margin:10px;
+	}
+	/*2、对齐*/
+	div#left{
+		text-align: left;
+	}
+	div#center{
+		text-align: center;
+	}
+	div#right{
+		text-align: right;
+	}
+	span#right{
+		text-align: right;
+	}
+	/*3、文本修饰*/
+	#p1{text-decoration: overline;}/*上划线*/
+	#p2{text-decoration: line-through;}/*删除效果*/
+	#p3{text-decoration: underline;}/*下划线*/
+	#p4{text-decoration: blink;}/*闪烁效果*/
+	#a1{text-decoration: none;}/*去掉超链下划线，无文本修饰*/
+	/*4、行间距*/
+	#p5,#p6,#p7{
+		width:200px;
+	}
+	#p6{
+		line-height: 200%;
+	}
+	#p7{
+		line-height: 20px;
+	}
+	/*5、字符间距*/
+	#p8,#p9{
+		width:200px;
+	}
+	p#p9{
+		color:red;
+		letter-spacing:5px;
+	}
+	/*6、单词间距*/
+	#p10,#p11{
+		width:400px;
+	}
+	#p11{
+		word-spacing: 10px;
+	}
+	/*7、首行缩进*/
+	#p12,p13{
+		width:400px;
+	}
+	#p13{
+		text-indent: 50px;
+	}
+	/*8、大小写*/
+	p#u{
+		text-transform: uppercase;
+	}
+	p#l{
+		text-transform: lowercase;
+	}
+	p#c{
+		text-transform: capitalize;
+	}
+	/*9、空白格*/
+	p.n{
+		white-space: normal;/*normal 默认。多个空白格或者换行符会被合并成一个空白格*/
+	}
+	p.p{
+		white-space: pre;/*pre 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器也不会换行。*/
+	}
+	p.pw{
+		white-space: pre-wrap;/*pre-wrap 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器，会换行。*/
+	}
+	p.nw{
+		white-space: nowrap;/*nowrap 一直不换行，直到使用br*/
+	}
+</style>
+</head>
+<body>
+	<h3>1、文字颜色：</h3>
+	<h4>
+		属性名color<br>
+		颜色的值可以采用3种方式<br>
+		1. 预定义的颜色名字<br>
+		比如red,gray,white,black,pink<br>
+		2. rgb格式<br>
+		分别代表红绿蓝的比例 rgb(250,0,255) 即表示红色是满的，没有绿色，蓝色是满的，即红色和蓝色混合在一起：紫色<br>
+		3. 16进制的表示<br>
+		#00ff00 等同于 rgb(0,255,0)<br>
+	</h4>
+	<div id="div1">
+		粉红色
+	</div>
+	<h3>2、对齐：</h3>
+	<h4>
+		属性:text-align<br>
+		值：left,right,center<br>
+		div是块级元素，其默认宽度是100%，所以文本有对齐的空间前提。<br>
+		但是，span却看不出右对齐效果，为什么呢？<br>
+		因为span是内联元素其默认宽度就是其文本内容的宽度<br>
+		简单说就是文本已经粑在其边框上了，对齐是看不出效果来的	<br>
+	</h4>
+	<div id="left">
+		左对齐
+	</div>
+	<div id="right">
+		右对齐
+	</div>
+	<div id="center">
+		居中
+	</div>
+	<span id="right">
+		span看不出对齐效果
+	</span>
+	<h3>3、文本修饰：</h3>
+	<h4>
+		属性：text-decoration,值： overline
+	</h4>
+	<p id="p1">上划线</p>
+	<p id="p2">删除效果</p>
+	<p id="p3">下划线</p>
+	<p id="p4">闪烁效果</p>
+	<a href="www.baidu.com">默认的超链</a>
+	<a id="a1" href="www.baidu.com">去掉下划线的超链</a>
+	<h3>4、行间距：</h3>
+	<h4>
+		属性：line-height ,值：数字或者百分比
+	</h4>
+	<p id="p5">
+		默认行间距
+		默认行间距
+		默认行间距
+		默认行间距
+		默认行间距
+		默认行间距
+		默认行间距
+		默认行间距
+	</p>
+	<p id="p6">
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+		200%行间距
+	</p>
+	<p id="p7">
+		20px行间距
+		20px行间距
+		20px行间距
+		20px行间距
+		20px行间距
+		20px行间距
+		20px行间距
+		20px行间距
+	</p>	
+	<h3>5、字符间距：</h3>
+	<h4>属性：letter-spacing ,值： 数字px</h4>
+	<p id="p8">
+		abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg
+	</p>
+	<p id="p9">
+		abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg
+	</p>
+	<h3>6、单词间距：</h3>
+	<h4>属性：word-spacing 值： 数字</h4>
+	<p id="p10">
+		tz love zz all of the world know this
+	</p>
+	<p id="p11">
+		tz love zz all of the world know this
+	</p>
+	<h3>7、首行缩进：</h3>
+	<h4>属性：text-indent ,值： 数字</h4>
+	<p id="p12">
+		没有缩进效果的一段文字没有缩进效果的一段文字没有缩进效果的一段文字没有缩进效果的一段文字
+	</p>
+	<p id="p13">
+		有缩进效果的一段文字有缩进效果的一段文字有缩进效果的一段文字有缩进效果的一段文字有缩进效果的一段 文字
+	</p>
+	<h3>8、大小写：</h3>
+	<h4>
+		属性：text-transform 
+		值： 
+		uppercase 全部大写 
+		capitalize 首字母大写 
+		lowercase 全部小写
+	</h4>
+	<p id="u">
+		大写：
+		abCD
+	</p>
+	<p id="c">
+		首字母大写：
+		aBcd
+	</p>
+	<p id="l">
+		小写：
+		aBcD
+	</p>
+	<h3>9、空白格：</h3>
+	<h4>
+		属性：white-space<br>
+		值：<br>
+		normal 默认。多个空白格或者换行符会被合并成一个空白格<br>
+		pre 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器也不会换行。<br>
+		pre-wrap 有多少空白格，显示多少空白格，相当于pre标签,如果长度超出父容器，会换行。<br>
+		nowrap 一直不换行，直到使用br<br>
+	</h4>
+	<p class="n">
+		在默认情况下，多个        空白格或者
+		换行符
+ 
+    	会被         合并成一个空白格
+	</p>
+	<p class="p">
+		保留所有的    空白格
+		以及换行符
+		相当于pre元素
+		特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字	
+	</p>
+	<p class="pw">
+		保留所有的    空白格
+		以及换行符
+		相当于pre元素
+		特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字特别长的一段文字	
+	</p>
+	<p class="nw">
+		不会换行
+		不会换行
+		不会换行
+		不会换行
+		不会换行
+		不会换行
+		直到br<br/>才换行
+	</p>
+</body>
+</html>
