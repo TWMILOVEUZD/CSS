@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS教程</title>
+<style>
+	#table2 td{
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+	<h3>1、不使用css:</h3>
+	<h4>
+		不使用css 给每一个单元格加上背景颜色 
+		就需要给每一个td元素加上bgcolor属性
+	</h4>
+	<!-- 
+		不使用css 给每一个单元格加上背景颜色 
+		就需要给每一个td元素加上bgcolor属性
+	 -->
+	 <table>
+	 	<tr>
+	 		<td bgcolor="gray">1</td>
+	 		<td bgcolor="gray">2</td>
+	 	</tr>
+	 	<tr>
+	 		<td bgcolor="gray">3</td>
+	 		<td bgcolor="gray">4</td>
+	 	</tr>	 	
+	 	<tr>
+	 		<td bgcolor="gray">a</td>
+	 		<td bgcolor="gray">b</td>
+	 	</tr>	 	
+	 </table>
+	<h3>2、使用css:</h3>
+	<h4>
+		使用css 给每一个单元格加上背景颜色
+		只需要在最前面写一段css代码，所有的单元格都有背景颜色了
+		这是一种分层设计的思想，css把和颜色，大小位置等信息剥离到style中，而html只用关心提供什么样的内容就行了。
+	</h4>
+	<table id="table2">
+		<tr>
+			<td>a</td>
+			<td>b</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>		
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>		
+	</table>
+</body>
+</html>
