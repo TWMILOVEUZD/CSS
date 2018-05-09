@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>边框</title>
+<style type="text/css">
+	/*边框风格*/
+	.solid{
+		border-style: solid;
+	}
+	.dotted{
+		border-style: dotted;
+	}
+	.dashed{
+		border-style: dashed;
+	}
+	.double{
+		border-style: double;
+	}
+	/*边框颜色*/
+	.red{
+		border-style: solid;
+		border-color: red;
+	}
+	/*边框宽度*/
+	#div2{
+		border-style: solid;
+		border-color: red;
+		border-width: 1px;
+	}
+	#div3{
+		border-style: solid;
+		border-color: red;
+	}
+	/*都放一起*/
+	#div5{
+		border:5px dotted LightSkyBlue;
+	}
+	/*只有一个方向有边框*/
+	#div6{
+		width:150px;
+		height:150px;
+		border-top-style: solid;
+		border-top-color: red;
+		border-top-width: 50px;
+		background-color: lightgray;
+	}
+	/*有交界的边都有边框*/
+	#div7{
+		text-align:center;
+		width:150px;
+		height: 150px;
+		background-color: lightgray;
+		border-top-style: solid;
+		border-top-color: red;
+		border-top-width: 50px;
+		border-left-style: solid;
+		border-left-color: blue;
+		border-left-width: 50px;				
+	}
+	#div8{
+		text-align:center;
+		width:150px;
+		height: 150px;
+		background-color: lightgray;
+		border-top-style: solid;
+		border-top-color: red;
+		border-top-width: 50px;
+		border-left-style: solid;
+		border-left-color: blue;
+		border-left-width: 50px;
+		
+		border-bottom-style: solid;
+		border-bottom-color: green;
+		border-bottom-width: 50px;
+		border-right-style: solid;
+		border-right-color: yellow;
+		border-right-width: 50px;				
+	}
+	/*块级元素和内联元素的边框区别*/
+	#div10{
+		border:1px solid red;
+	}
+	#span1{
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<h3>1、边框风格：border-style </h3>
+	<h4>
+		属性： border-style<br>
+		solid: 实线 <br>
+		dotted:点状 <br>
+		dashed:虚线 <br>
+		double:双线<br>
+	</h4>
+	<div>默认无边框</div><br>
+	<div class="solid">实线边框</div><br>
+	<div class="dotted">点状边框</div><br>
+	<div class="dashed">虚线边框</div><br>
+	<div class="double">双线边框</div><br>
+	<h3>2、边框颜色：border-color</h3>
+	<h4>
+		属性：border-color<br>
+		值：red,#ff0000,rgb(255,0,0)<br>
+	</h4>
+	<div>默认无边框</div><br>
+	<div class="red">实线红色边框</div><br>
+	<h3>3、边框宽度：border-width</h3>
+	<h4>
+		属性：border-width<br> 
+		值：数字<br>
+	</h4>
+	<div id="div1">默认无边框</div><br> 
+	<div id="div2">实线红色细边框</div><br> 
+	<div id="div3">实线红色默认宽度</div><br> 
+	<h3>4、都放在一起：border</h3>
+	<h4>
+		属性：border<br>
+		值：颜色 风格 宽度<br>
+	</h4>
+	<div id="div4">默认无边框</div><br>
+	<div id="div5">点状蓝色宽边框</div><br>
+	<h3>5、只有一个方向有边框：</h3>
+	<h4>
+		通过制定位置，可以只给一个方向设置边框风格，颜色和宽度<br>
+		border-top-style:solid;<br>
+		border-top-color:red;<br>
+		border-top-width: 50px;<br>
+		top,bottom,left,right 分别对应上下左右<br>
+	</h4>
+	<div id="div6">只有上面有边框</div>
+	<h3>6、有交界的边都有边框：</h3>
+	<h4>
+		比如上和左就是有交界的，而上和下就没有交界<br>
+		当有交界的边同时出现边框的时候，就会以倾斜的形式表现交界线。<br>
+	</h4>
+	<div id="div7">左边和上面都有边框</div><br>
+	<div id="div8">四边都有边框</div><br>
+	<h3>7、块级元素和内联元素的边框的区别：</h3>
+	<h4>
+		可以看到，块级元素div默认是占用100%的宽度<br>
+		常见的块级元素有div h1 p 等<br>
+		而内联元素span的宽度由其内容的宽度决定<br>
+		常见的内联元素有 a b strong i input 等<br>
+	</h4>
+	<div id="div9">默认无边框div</div><br>
+	<div id="div10">实线红色细边框</div><br>
+	<span id="span1">实线红色细边框</span>
+</body>
+</html>
