@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表格相关样式</title>
+<style type="text/css">
+	/*1、表格布局*/
+	.t1,.t2,.t3{
+		table-layout: automatic;
+	}
+	.t4,.t5,.t6{
+		table-layout: fixed;
+	}
+	/*表格边框*/
+	.t7{
+		border-collapse: separate;
+	}
+	.t8{
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<h3>1、表格布局：</h3>
+	<h4>
+		属性:table-layout <br>
+		automatic; 单元格的大小由td的内容宽度决定 <br>
+		fixed; 单元格的大小由td上设置的宽度决定<br> 
+		<font color="red">注：只对连续的英文字母起作用，如果使用中文就看不到效果</font><br>
+	</h4>
+	<h4>(1)table-layout:aotomatic;单元格的大小由td的内容宽度决定</h4>
+	<h5>1)英文分开：</h5>
+	<table class="t1" border="1" width="100%">
+		<tr>
+			<td width="10%">i love u my lady zz one day you will marry me</td>
+			<td>i love u</td>
+		</tr>
+	</table>
+	<h5>2)中文：</h5>
+	<table class="t2" border="1" width="100%">
+		<tr>
+			<td width="10%">我爱你，如果给你寄一本书，我会给你寄一本关于庄稼的，告诉你稻子和稗子的区别，告诉你一棵稗子，提心吊胆的春天</td>
+			<td>我爱你</td>
+		</tr>
+	</table>
+	<h5>3)连续英文：</h5>
+	<table class="t3" border="1" width="100%">
+		<tr>
+			<td width="10%">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</td>
+			<td>abc</td>
+		</tr>
+	</table>	
+	<h4>(2)table-layout:fixed;单元格的大小由td上设置的宽度决定</h4>
+	<h5>1)英文分开：</h5>
+	<table class="t4" border="1" width="100%">
+		<tr>
+			<td width="50px">i love u my lady zz one day you will marry me</td>
+			<td>i love u</td>
+		</tr>
+	</table>
+	<h5>2)中文：</h5>
+	<table class="t5" border="1" width="100%">
+		<tr>
+			<td width="50px">我爱你，如果给你寄一本书，我会给你寄一本关于庄稼的，告诉你稻子和稗子的区别，告诉你一棵稗子，提心吊胆的春天</td>
+			<td>我爱你</td>
+		</tr>
+	</table>
+	<h5>3)连续英文：</h5>
+	<table class="t6" border="1" width="100%">
+		<tr>
+			<td width="50px">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</td>
+			<td>abc</td>
+		</tr>
+	</table>		
+	<h3>2、表格边框：</h3>
+	<h4>
+		属性：border-collapse<br>
+		值：<br>
+		separate:边框分隔<br>
+		collapse:边框合并<br>
+	</h4>
+	<h5>(1)separate:边框分隔</h5>
+	<table class="t7" border="1" width="200px">
+		<tr>
+			<td width="50%">边框分隔</td>
+			<td width="50%">边框分隔</td>
+		</tr>
+		<tr>
+			<td width="50%">边框分隔</td>
+			<td width="50%">边框分隔</td>
+		</tr>		
+		<tr>
+			<td width="50%">边框分隔</td>
+			<td width="50%">边框分隔</td>
+		</tr>				
+	</table>
+	<h5>(2)collapse:边框合并</h5>
+	<table class="t8" border="1" width="200px">
+		<tr>
+			<td width="50%">边框合并</td>
+			<td width="50%">边框合并</td>
+		</tr>
+		<tr>
+			<td width="50%">边框合并</td>
+			<td width="50%">边框合并</td>
+		</tr>		
+		<tr>
+			<td width="50%">边框合并</td>
+			<td width="50%">边框合并</td>
+		</tr>				
+	</table>
+</body>
+</html>
