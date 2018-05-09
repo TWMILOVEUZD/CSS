@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>边框练习-斑马线</title>
+<style type="text/css">
+	h1{
+		text-align: center;
+	}
+	table{
+		border-collapse:collapse;
+		width: 90%;
+	}
+	tr{
+		height: 35px;
+		border-bottom-style: solid;
+		border-bottom-color: lightgray;
+		border-bottom-width: 1px;
+	}
+	tr.odd{
+		background-color: #f8f8f8;
+	}
+	tr.head{
+		border-bottom-width: 2px;
+	}
+	td{
+		width: 25%;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<h1>练习斑马线</h1>
+	<table>
+		<tr class="head">
+			<td>id</td>
+			<td>名称</td>
+			<td>血量</td>
+			<td>伤害</td>
+		</tr>
+		<tr class="odd">
+			<td>1</td>
+			<td>gareen</td>
+			<td>340</td>
+			<td>58</td>
+		</tr>		
+		<tr class="even">
+			<td>2</td>
+			<td>teemo</td>
+			<td>320</td>
+			<td>76</td>
+		</tr>		
+		<tr class="odd">
+			<td>3</td>
+			<td>annie</td>
+			<td>380</td>
+			<td>38</td>
+		</tr>		
+		<tr class="even">
+			<td>4</td>
+			<td>deadbrother</td>
+			<td>400</td>
+			<td>90</td>
+		</tr>				
+	</table>
+</body>
+</html>
