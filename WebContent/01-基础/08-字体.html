@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>字体</title>
+<style type="text/css">
+	/*1、尺寸*/
+	#p2{
+		font-size: 30px;
+	}
+	#p3{
+		font-size: 50%;
+	}
+	#p4{
+		font-size: 0.5em;
+	}
+	/*2、风格*/
+	#p6{
+		font-style: normal;
+	}
+	#p7{
+		font-style: italic;
+	}
+	/*3、粗细*/
+	#p9{
+		font-weight: normal;
+	}
+	#p10{
+		font-weight: bolder;
+	}
+	/*4、字库*/
+	#p12{
+		font-family: "Times New Roman";
+	}
+	#p13{
+		font-family: Arial;
+	}
+	#p14{
+		font-family: 宋体;
+	}
+	#p15{
+		font-family:黑体;
+	}
+	#p16{
+		font-family: 楷体;
+	}
+	#p17{
+		font-family: 微软雅黑;
+	}
+	/*5、把大小，风格，粗细，字库都写在一行里面*/
+	#p19{
+		font:italic bold 30px "Times New Roman";
+	}	
+</style>
+</head>
+<body>
+	<h3>1、尺寸</h3>
+	<h4>属性：font-size,值：数字或者百分比</h4>
+	<p id="p1">正常大小</p>
+	<p id="p2">30px大小的文字</p>
+	<p id="p3">50%比例的文字</p>
+	<p id="p4">0.5em等同于50%比例的文字</p>
+	<h3>2、风格</h3>
+	<h4>font-style: normal 标准字体  italic 斜体</h4>
+	<p id="p5">标准字体</p>
+	<p id="p6">标准字体</p>
+	<p id="p7">斜体</p>
+	<h3>3、粗细</h3>
+	<h4>属性 font-weight normal 标准粗细  bolder 粗一点</h4>
+	<p id="p8">标准字体</p>
+	<p id="p9">标准字体</p>
+	<p id="p10">粗一点</p>
+	<h3>4、字库</h3>
+	<h4>属性font-family</h4>
+	<p id="p11">默认字库 font family:default</p>
+	<p id="p12">设置字库 font-family: Times New Roman</p>
+	<p id="p13">设置字库 font-family: Arial</p>
+	<p id="p14">设置字库 font-family: 宋体, 这种字体是IE默认字体</p>
+	<p id="p15">设置字库 font-family: 黑体</p>
+	<p id="p16">设置字库 font-family: 楷体</p>
+	<p id="p17">设置字库 font-family: 微软雅黑, 这个字体是火狐默认字体</p>
+	<h3>5、声明在一起</h3>
+	<h4>把大小，风格，粗细，字库都写在一行里面</h4>
+	<p id="p18">默认字体</p>
+	<p id="p19">斜体的 粗体的 大小是30px的 "Times New Roman" </p>
+</body>
+</html>
