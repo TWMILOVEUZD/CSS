@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>内边距</title>
+<style type="text/css">
+	/*左内边距*/
+	.s1{
+		background-color: green;
+		border:5px solid red;
+	}
+	.s2{
+		background-color: green;
+		border:5px solid red;
+		padding-left: 50px;		
+	}
+	/*内边距，写1个和写4个的区别*/
+	.s3{
+		background-color: green;
+		border:5px solid red;	
+		padding:20px;
+	}
+	.s4{
+		background-color: green;
+		border:5px solid red;	
+		padding: 10px 20px 30px 40px;
+	}
+	#h1{
+		color: blue;
+	}
+</style>
+</head>
+<body>
+	<h3 id="h1">
+		元素内边距 <br>
+		指的是元素里的内容与边框之间的距离 <br>
+		属性： <br>
+		padding-left: 左内边距 <br>
+		padding-right: 右内边距 <br>
+		padding-top: 上内边距 <br>
+		padding-bottom: 下内边距 <br>
+		padding: 上 右 下 左<br>
+	</h3>
+		
+	<h3>1、左内边距</h3>
+	<h4>
+	属性:padding-left<br> 
+	值：数字 <br>
+	指的是，元素中的内容，与边框之间的距离<br>
+	</h4>
+	<span class="s1">无内边距的span</span><br><br>
+	<span class="s2">左边距为50的span</span><br>
+	<h3>2、内边距，写1个和写4个的区别</h3>
+	<h4>
+		属性：padding<br>
+		值：如果只写一个，即四个方向的值<br>
+		值：如果写四个，即四个方向的值<br>
+		上 右 下 左,依顺时针的方向依次赋值<br>
+	</h4>
+	<span class="s3">padding:20的span</span><br/> <br/> <br/> <br/>
+	<span class="s4">padding: 10 20 30 40 的span</span><br/> <br/> <br/> <br/>
+	<h3>3、当内边距的值少于4个的时候</h3>
+	<h4>
+		如果缺少左内边距的值，则使用右内边距的值。 <br>
+		如果缺少下内边距的值，则使用上内边距的值。<br> 
+		如果缺少右内边距的值，则使用上内边距的值。 <br>
+		举例说明 <br>
+		这是完整4个的 <br>
+		padding: 10 20 40 80 <br>
+		如果只有3个 <br>
+		padding: 10 20 40 <br>
+		那么left取right <br>
+		padding: 10 20 40 = padding: 10 20 40 20 <br>
+		如果只有两个 <br>
+		padding: 10 20 <br>
+		那么bottom取top，left取right <br>
+		pading: 10 20 = padding:10 20 10 20 <br>
+		如果只有一个 <br>
+		padding:10 <br>
+		那么right取top，bottom取top，left取top<br> 
+		padding:10 = padding:10 10 10 10 <br>
+	</h4>
+	<img alt="内边距" src="../img/内边距.png">
+</body>
+</html>
