@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>显示方式</title>
+<style>
+
+	div,span{
+		width:200px;
+		height:100px;
+		border:1px solid lightblue;
+	}
+	/*1、隐藏*/
+	div.d1{
+		display: none;
+	}
+	/*2、块级*/
+	span.s1{
+		display: block;
+	}
+	/*3、内联*/
+	div.d2{
+		display:inline;
+	}
+	/*4、内联-块级*/
+	span.s2{
+		display: inline-block;
+		border: 1px solid lightblue;
+		margin:10px;
+		width: 100px;
+		height: 100px;
+	}
+</style>
+</head>
+<body>
+	<h2>元素的display显示方式有多种，隐藏、块级、内联、内联-块级、其他</h2>
+	<!-- 1、隐藏 -->
+	<h3>1、隐藏(display:none):</h3>
+	<h4>
+		在隐藏章节已经使用过通过display的方式隐藏一个元素<br>
+		display:none; 使得被选择的元素隐藏，并且不占用原来的位置<br>
+	</h4>
+	<div>可见的div1</div>
+	<div class="d1">隐藏的div2,使用display:none隐藏</div>
+	<div>可见的div3</div>
+	<!-- 块级 -->
+	<h3>2、块级(display:block):</h3>
+	<h4>
+		display:block; 表示块级元素<br>
+		块级元素会自动在前面和后面加上换行，并且在其上的width和height也能够生效<br>
+		div默认是块级元素<br>
+		span默认是内联元素(不会有换行,width和height也不会生效)<br>
+	</h4>
+	<div>普通的div块</div>
+	<span>这是普通span</span> <span>这是普通span</span> <span>这是普通span</span>
+	<span class="s1">这是span,被改造成了块级元素</span>
+	
+	<!-- 内联 -->
+	<h3>3、内联(display:inline)：</h3>
+	<h4>
+		display:inline; 表示内联元素<br>
+		内联元素前后没有换行，并且在其上的width和height也无效。 其大小由其中的内容决定<br>
+		div默认是块级元素<br>
+		span默认是内联元素<br>
+	</h4>
+	<span>这是普通span</span> <span>这是普通span</span> <span>这是普通span</span>
+	<div class="d2">这是div，被改造成了内联元素</div>
+	
+	<!-- 内联-块级 -->
+	<h3>4、内联-块级(display:inline-block)：</h3>
+	<h4>
+		内联是不换行，但是不能指定大小<br>
+		块级时能制定大小，但是会换行<br>
+		有时候，需要元素处于同一行，同时还能指定大小，这个时候，就需要用到内联-块级 inline-block<br>
+	</h4>
+	<h4 style="color:red">像这样 ，每个都能设置宽度 ，同时还能在同一行:</h4>
+	<span class="s2">盖伦</span>
+	<span class="s2">蒙多医生</span>
+	<span class="s2">奈德丽</span>
+	<span class="s2">蒸汽机器人</span>
+	<!-- 其他 -->
+	<h3>5、其他：</h3>
+	<h4>
+		其他的显示方式像<br>
+		list-item 显示为列表<br>
+		table 显示为表格<br>
+		inline-table 显示为前后无换行的表格<br>
+		table-cell 显示为单元格<br>
+		这些就不太常见了<br>
+	</h4>
+</body>
+</html>
