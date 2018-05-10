@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>超链状态</title>
 <style>
+	/*1、超链状态*/
  	a:LINK{
  		color:#FF0000;
  	}
@@ -15,6 +16,10 @@
 	}
 	a:ACTIVE {
 		color: #0000FF;
+	}
+	/*2、去除下划线的超链*/
+	.no_underline{
+		text-decoration: none;
 	}
 </style>
 </head>
@@ -29,5 +34,16 @@
 		active - 鼠标左键点击下去，但是尚未弹起的时候<br>
 	</h4>
 	<a href="http://www.baidu.com" target="_blank">超链的不同状态：百度</a>
+	<h3>2、去除超链的下划线：</h3>
+	<h4>
+		默认状态下，超链是有下划线的，但是现在网站上的超链普遍采用无下划线风格。<br>
+		使用 text-decoration: none 文本修饰的样式来解决<br>
+	</h4>
+	<a href="http://www.12306.com">默认超链</a>
+	<br>
+	<a class="no_underline" href="http://www.12306.com">去除了下划线的超链</a>
+	
+	
+	
 </body>
 </html>
