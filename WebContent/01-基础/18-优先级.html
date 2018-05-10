@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>优先级</title>
+
+<!-- 引入css文件： -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<style>
+	.p1{
+		color: green;
+	}
+	.p2{
+		color:green;
+	}
+	.p3{
+		color: green !important;
+	}
+</style>
+
+</head>
+<body>
+	<h3>1、style标签与外部文件style.css样式重复:</h3>
+	<h4>
+		外部文件style.css的内容是<br>
+		.p1{<br>
+		  color:red;<br>
+		}<br>
+		.span1{<br>
+		  color:blue;<br>
+		}<br>
+		同时style标签中也有一个.p1<br>
+		那么优先使用： 最后出现的一个<br>
+	</h4>
+	<p class="p1">p1 颜色是绿色，优先使用靠的最后出现的</p>
+	<h3>2、style标签上的与style属性冲突:</h3>
+	<h4>
+		style标签上的与style属性冲突 <br>
+		优先使用style属性<br>
+	</h4>
+	<p class="p2" style="color:red">p2 颜色是红色，优先使用style属性</p>
+	<h3>3、!important：</h3>
+	<h4>4、如果样式上增加了!important，则优先级最高，甚至高于style属性</h4>
+	<p class="p3" style="color:red">p3 颜色是绿色，优先使用!important样式</p>
+</body>
+</html>
