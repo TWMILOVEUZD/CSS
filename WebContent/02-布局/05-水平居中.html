@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>水平居中</title>
+<style>
+	#d1{
+		border: 1px solid lightblue;
+		margin:10px;
+		
+	}
+	#d2{
+		border: 1px solid lightblue;
+		margin:10px;		
+	}
+	#s1{
+		border: 1px solid lightgray;
+	}
+	
+</style>
+</head>
+<body>
+	<h2>1、内容居中：</h2>
+	<div id="d1" align="center">
+		通过设置属性align="center" 居中的内容
+	</div>
+	<div id="d1" style="text-align: center;">
+		通过样式style="text-align:center" 居中的内容
+	</div>
+	<h2>2、元素居中：</h2>
+	<div id="d2">默认情况下div会占用100%的宽度,所以无法观察元素是否居中</div>
+	<div id="d2" style="width:300px;margin:0 auto;">
+		设置本div的宽度，然后再使用样式 margin: 0 auto来使得元素居中
+	</div>
+	<span id="s1" style="width:300px;margin:0 auto;">
+		 span 是内联元素，无法设置宽度，所以不能通过margin:0 auto居中
+	</span>
+	<div id="d2" style="text-align:center;width:600px;margin:0 auto;">
+		<span id="s1">
+			span的居中可以通过放置在div中，然后让div text-align实现居中
+		</span>
+	</div>
+</body>
+</html>
