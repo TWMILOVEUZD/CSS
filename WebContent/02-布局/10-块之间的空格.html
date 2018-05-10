@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>块之间的空格</title>
+<style>
+	span{
+		border-bottom: 2px solid lightblue;
+	}
+	
+	.nocontinue2 span{
+		float:left;
+	}
+</style>
+</head>
+<body>
+	<h2>1、块之间有空格：</h2>
+	<div class="continue">
+	<span>连续的span</span><span>连续的span</span><span>连续的span</span><span>连续的span</span>
+	</div>
+	<div class="nocontinue1">
+	<span>有换行的span</span>
+	<span>有换行的span</span>
+	<span>有换行的span</span>
+	</div>		
+	<h2>2、解决办法：</h2>
+	<h3>
+		使用float来解决。<br>
+		float使用完毕之后，记得在下面加上  style="clear:both" 用于使得后续的元素，不会和这些span重复在一起<br>
+	</h3>
+	<div class="nocontinue2">
+	<span>有换行的span</span>
+	<span>有换行的span</span>
+	<span>有换行的span</span>
+	</div>
+	<div style="clear:both"></div>
+	<div>后续的内容</div>
+</body>
+</html>
