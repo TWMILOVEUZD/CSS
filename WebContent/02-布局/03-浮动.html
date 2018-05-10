@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>浮动：float</title>
+<style>
+	/*1、文字向右浮动*/
+	.f1{
+		float: right;
+	}
+	/*2、文字向左浮动*/
+	.f2{
+		float:left;
+	}
+	/*3、文字围绕图片*/
+	img{
+		width: 100px;
+		height: 100px;
+	}
+	.f3{
+		float: left;
+	}
+	#div1{
+		width: 320px;
+	}
+	/*文字不想围绕图片*/
+	.f4{
+		float: left;
+	}
+	#div2{
+		width:320px;
+	}
+	.clearp{
+		clear:left;
+	}
+	/*水平排列div*/
+	#defaultDiv div{
+		border: 1px solid lightgray;
+		width: 50px;
+		height: 50px;
+	}
+	#floatingDiv{
+		width:250px;
+	}
+	#floatingDiv div{
+		border: 1px solid lightgray;
+		width: 50px;
+		height: 50px;	
+		float: left;	
+	}
+</style>
+</head>
+<body>
+	<h2>
+		浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。 <br>
+		属性：float <br>
+		值： left,right <br>
+	</h2>
+	<h3>1、文字向右浮动：</h3>
+	<h4>
+		文字向右浮动<br>
+		浮动后，原来的“坑”就让出来了<br>
+		并且是在原来的高度的基础上，向右浮动<br>
+	</h4>
+	<div >正常文字1</div>
+	<div >正常文字2</div>
+	<div class="f1">浮动的文字</div>
+	<div >正常文字4</div>
+	<div >正常文字5</div>
+	<h3>2、文字向左浮动：</h3>
+	<h4>
+		文字向左浮动 <br>
+		首先，向左浮动后，会把“坑”让出来，这个时候"正常的文字4“ 就会过来试图占这个坑，<br>
+		但是，发现 “浮动的文字”并没有走，结果，就只好排在它后面了<br>
+	</h4>
+	<div >正常文字1</div>
+	<div >正常文字2</div>
+	<div class="f2">浮动的文字</div>
+	<div >正常文字4</div>
+	<div >正常文字5</div>
+	<h3>3、文字围绕图片：</h3>
+	<h4>
+		当图片不浮动时，文字就会换行出现在下面 <br>
+		当图片浮动时，文字围绕着图片 <br>
+		和步骤2一样，当图片浮动的时候，就会让出这个“坑”出来，这个时候文字就试图去填补这个“坑”，<br>
+		结果发现，尼玛，图片没走，那就只好围绕图片摆放了<br>
+	</h4>
+	<div id="div1">
+		<img src="../img/IMG_2617.JPG"/>
+		<p>  
+		  当图片不浮动时，文字就会换行出现在下面
+		  当图片不浮动时，文字就会换行出现在下面
+		  当图片不浮动时，文字就会换行出现在下面
+		  当图片不浮动时，文字就会换行出现在下面
+		  当图片不浮动时，文字就会换行出现在下面
+		  当图片不浮动时，文字就会换行出现在下面
+		</p>
+	</div>
+		 
+	<div id="div1">
+		<img  class="f3" src="../img/IMG_2617.JPG"/>
+		<p>
+		当图片浮动时，文字围绕着图片
+		 当图片浮动时，文字围绕着图片
+		 当图片浮动时，文字围绕着图片
+		 当图片浮动时，文字围绕着图片
+		 当图片浮动时，文字围绕着图片
+		</p>
+	</div>
+	<h3>4、文字不想围绕图片：</h3>
+	<h4>
+		不允许出现浮动元素 <br>
+		属性:clear <br> 
+		值: left right both none <br> 
+		如果p左边出现了浮动的元素，如此例，则设置clear:left 即达到不允许浮动元素出现在左边的效果 <br>
+	</h4>
+	<div id="div2">
+		<img  class="f4" src="../img/IMG_2617.JPG"/>
+		<p>  
+			当图片浮动时，文字围绕着图片
+			 当图片浮动时，文字围绕着图片
+			 当图片浮动时，文字围绕着图片
+			 当图片浮动时，文字围绕着图片
+			 当图片浮动时，文字围绕着图片
+		</p>
+	</div>
+	<div id="div2">
+		<img  class="f4" src="../img/IMG_2617.JPG"/>
+		<p class="clearp">  
+			当图片浮动时，文字却不想围绕图片
+			当图片浮动时，文字却不想围绕图片
+			当图片浮动时，文字却不想围绕图片
+			当图片浮动时，文字却不想围绕图片 
+		</p>
+	</div>
+	<h3>5、水平排列div：</h3>
+	<h4>
+		默认的div排列是会换行的 <br>
+		如果使用float就可以达到水平排列的效果，通常会用在菜单，导航栏等地方  <br>
+		如果超出了父容器，还会有自动换行的效果 <br>
+	</h4>
+	<h5>(1)默认的div排列是会换行的:</h5>
+	<div id="defaultDiv">
+		<div >
+		       菜单1
+		</div>
+		<div>
+		       菜单2
+		</div>
+		<div>
+		       菜单3
+		</div>	
+	</div>		 
+	<h5>
+		(2)如果使用float就可以达到水平排列的效果，通常会用在菜单，导航栏等地方,如果超出了父容器，还会有自动换行的效果:<br>
+	</h5> 
+	<div id="floatingDiv">
+		<div>
+		      菜单1
+		</div>
+		<div>
+		      菜单2
+		</div>
+		<div>
+		      菜单3
+		</div>
+		<div>
+		      菜单4
+		</div>
+		<div>
+		      菜单5
+		</div>
+		<div>
+		      菜单6
+		</div>
+	</div>
+	
+</body>
+</html>
